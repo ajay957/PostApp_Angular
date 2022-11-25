@@ -5,6 +5,8 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { AddPostComponent } from './add-post/add-post.component';
 import { Router, RouterModule, Routes } from '@angular/router';
+import { ViewAllComponent } from './view-all/view-all.component';
+import { NavBarComponent } from './nav-bar/nav-bar.component';
 
 
 const myRoute:Routes=[
@@ -12,12 +14,18 @@ const myRoute:Routes=[
   {
   path:"",
   component:AddPostComponent
+  },
+  {
+    path:"view",
+    component:ViewAllComponent
   }
 ]
 @NgModule({
   declarations: [
     AppComponent,
-    AddPostComponent
+    AddPostComponent,
+    ViewAllComponent,
+    NavBarComponent
   ],
   imports: [
     BrowserModule,
